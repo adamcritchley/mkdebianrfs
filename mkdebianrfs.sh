@@ -31,7 +31,7 @@
 progname="$0"
 
 debian_packages="locales"
-debian_mirror="http://ftp.uk.debian.org/debian/"
+debian_mirror="http://ftp.debian.org/debian/"
 debian_path="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
 usage() {
