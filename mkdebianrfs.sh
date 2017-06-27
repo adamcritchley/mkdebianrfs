@@ -238,7 +238,6 @@ PATH="${debian_path}" chroot "${target_dir}" /bin/bash
 
 # Clean up.
 chroot "${target_dir}" apt-get clean
-rm -f "${target_dir}/usr/bin/qemu-${target_arch}-static"
 
 echo
 
