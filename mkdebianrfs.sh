@@ -186,6 +186,10 @@ echo
 echo "Configuring target system..."
 echo
 
+mknod -m 644 "${target_dir}/dev/urandom" c 1 9
+mknod -m 644 "${target_dir}/dev/random" c 1 8
+mknod -m 644 "${target_dir}/dev/null" c 1 3
+
 # Create root password.
 echo "Please enter a password for the root user:"
 PATH="${debian_path}" chroot "${target_dir}" passwd root
