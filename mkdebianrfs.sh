@@ -188,7 +188,14 @@ echo
 
 mknod -m 644 "${target_dir}/dev/urandom" c 1 9
 mknod -m 644 "${target_dir}/dev/random" c 1 8
+mknod -m 644 "${target_dir}/dev/zero" c 1 5
 mknod -m 644 "${target_dir}/dev/null" c 1 3
+mknod -m 666 "${target_dir}/dev/tty" c 5 0
+mknod -m 622 "${target_dir}/dev/console" c 5 1
+mknod -m 666 "${target_dir}/dev/ptmx" c 5 2
+mount -t proc /proc "${target_dir}/proc/"
+mount -t sysfs /sys "${target_dir}/sys/"
+# mount -o bind /dev dev/
 
 # Create root password.
 echo "Please enter a password for the root user:"
