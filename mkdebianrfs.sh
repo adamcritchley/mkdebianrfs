@@ -193,7 +193,9 @@ mknod -m 644 "${target_dir}/dev/null" c 1 3
 mknod -m 666 "${target_dir}/dev/tty" c 5 0
 mknod -m 622 "${target_dir}/dev/console" c 5 1
 mknod -m 666 "${target_dir}/dev/ptmx" c 5 2
+mkdir "${target_dir}/proc/"
 mount -t proc /proc "${target_dir}/proc/"
+mkdir "${target_dir}/sys/"
 mount -t sysfs /sys "${target_dir}/sys/"
 # mount -o bind /dev dev/
 touch "${target_dir}/dev/log"
