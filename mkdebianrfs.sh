@@ -196,6 +196,9 @@ mknod -m 666 "${target_dir}/dev/ptmx" c 5 2
 mount -t proc /proc "${target_dir}/proc/"
 mount -t sysfs /sys "${target_dir}/sys/"
 # mount -o bind /dev dev/
+touch "${target_dir}/dev/log"
+chmod 644 "${target_dir}/dev/log"
+mount --bind /dev/log "${target_dir}/dev/log"
 
 # Create root password.
 echo "Please enter a password for the root user:"
