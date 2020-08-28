@@ -81,3 +81,6 @@ sudo umount qemu-img
 # and finally boot it up!
 qemu-system-arm -kernel vmlinuz-3.10.0-6-generic-lpae -initrd initrd.img-3.10.0-6-generic-lpae -M vexpress-a15 -serial stdio -m 1024 -append 'root=/dev/mmcblk0 rw mem=1024M raid=noautodetect rootwait console=ttyAMA0,38400n8 devtmpfs.mount=0' -sd vexpress-4G.img -dtb ./vexpress-v2p-ca15-tc1.dtb
 ```
+
+# Useful sites
+http://ports.ubuntu.com/ubuntu-ports/
